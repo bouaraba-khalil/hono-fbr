@@ -1,0 +1,39 @@
+{
+  "name": "hono-fbr",
+  "version": "0.0.1",
+  "description": "File base routing for hono.js",
+  "keywords": [
+    "hono",
+    "typescript"
+  ],
+  "homepage": "https://github.com/bouaraba-khalil/hono-fbr",
+  "bugs": {
+    "url": "https://github.com/bouaraba-khalil/hono-fbr/issues"
+  },
+  "author": "Khalil <bouaraba.khalil@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouaraba-khalil/hono-fbr.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "ci": "pnpm run build && pnpm run check-format && pnpm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "test": "vitest run",
+    "dev": "vitest",
+    "local-release": "changeset version && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  }
+}
